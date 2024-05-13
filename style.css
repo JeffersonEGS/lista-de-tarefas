@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    background: -webkit-linear-gradient(left, #ffffff, #c71ac7)
+    background: -webkit-linear-gradient(left, #ffffff, #c71ac7);
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
