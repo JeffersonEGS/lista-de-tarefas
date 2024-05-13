@@ -13,6 +13,13 @@ function addTask() {
             li.remove();
         };
 
+        var confirmBtn = document.createElement("button");
+        confirmBtn.textContent = "Confirmar";
+        confirmBtn.className = "confirm-btn";
+        confirmBtn.onclick = function() {
+            li.classList.toggle("confirmado"); // Adiciona ou remove a classe "confirmado" no elemento li ao clicar no botão Confirmar
+        };
+
         var editBtn = document.createElement("button");
         editBtn.textContent = "Editar";
         editBtn.className = "edit-btn";
@@ -22,11 +29,13 @@ function addTask() {
                 li.textContent = newText;
                 li.appendChild(editBtn); // Adicionando o botão de editar novamente
                 li.appendChild(deletarBtn); // Mantendo o botão de deletar
+                li.appendChild(confirmBtn); // Adicionando o botão de confirmar
             }
         };
 
         li.appendChild(editBtn);
         li.appendChild(deletarBtn);
+        li.appendChild(confirmBtn);
         lista1.appendChild(li);
 
         lista.value = "";
