@@ -9,21 +9,21 @@ function addTask() {
         var deletarBtn = document.createElement("button");
         deletarBtn.textContent = "Deletar";
         deletarBtn.className = "delete-btn";
-        deletarBtn.onclick = function() {
+        deletarBtn.onclick = () => {
             li.remove();
         };
 
         var confirmBtn = document.createElement("button");
         confirmBtn.textContent = "Confirmar";
         confirmBtn.className = "confirm-btn";
-        confirmBtn.onclick = function() {
+        confirmBtn.onclick = () => {
             li.classList.toggle("confirmado"); // Adiciona ou remove a classe "confirmado" no elemento li ao clicar no botão Confirmar
         };
 
         var editBtn = document.createElement("button");
         editBtn.textContent = "Editar";
         editBtn.className = "edit-btn";
-        editBtn.onclick = function() {
+        editBtn.onclick = () => {
             var newText = prompt("Editar tarefa:", li.textContent);
             if (newText !== null) {
                 li.textContent = newText;
